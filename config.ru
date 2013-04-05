@@ -1,3 +1,3 @@
-require_relative 'geopostcoder'
+require './geopostcoder'
 
 run Sinatra::Application
