@@ -1,3 +1,3 @@
 require './geopostcoder'
 
-run Sinatra::Application
+run GeoPostCoder.new

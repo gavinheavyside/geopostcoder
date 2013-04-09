@@ -1,0 +1,16 @@
+!!! 5
+%html{lang: 'en'}
+  %head
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    %title= @page_title || "GeoPostCoder"
+    = bootstrap_assets
+    %style= "body {padding-top: 60px; }"
+  %body
+    .navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        %a.brand{href: '/'} GeoPostCoder
+        %ul.nav
+          %li.active
+            %a{href: '/'} Find a Postcode
+    .container
+      = yield

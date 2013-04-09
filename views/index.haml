@@ -1,0 +1,15 @@
+.section
+  .row
+    .span10.offset1
+      .well
+        %form.form-horizontal{:action => "/postcode", :method => "post"}
+          %legend Enter Lat and Lng
+          .control-group.string.required
+            %label.control-label.string.required{:for => ""} Lat
+            .controls
+              %input.string.required{:type => "text", :name => "lat", :id => "lat"}
+          .control-group.string.required
+            %label.control-label.string.required{:for => ""} Lng
+            .controls
+              %input.string.required{:type => "text", :name => "lng", :id => "lng"}
+          %input.btn.btn-primary{:type => "submit", :value => "Submit!"}
