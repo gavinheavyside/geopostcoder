@@ -7,9 +7,9 @@
           .control-group.string.required
             %label.control-label.string.required{:for => ""} Lat
             .controls
-              %input.string.required{:type => "text", :name => "lat", :id => "lat"}
+              %input.string.required{:type => "text", :name => "lat", :id => "lat", required: true}
           .control-group.string.required
             %label.control-label.string.required{:for => ""} Lng
             .controls
-              %input.string.required{:type => "text", :name => "lng", :id => "lng"}
+              %input.string.required{:type => "text", :name => "lng", :id => "lng", required: true}
           %input.btn.btn-primary{:type => "submit", :value => "Submit!"}

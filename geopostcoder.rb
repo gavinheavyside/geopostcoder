@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/twitter-bootstrap'
 require 'haml'
+require_relative 'lib/geocoder'
 
 class GeoPostCoder < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
@@ -15,7 +16,8 @@ class GeoPostCoder < Sinatra::Base
     @lat = params[:lat]
     @lng = params[:lng]
 
-#    @postcode = reverse_geocode_postcode(@lat, @lng)
+    geocoder = Geocoder.new
+    @postcode = geocoder.lookup_postcode_by_lat_lng(@lat, @lng)
 
     haml :postcode
   end
