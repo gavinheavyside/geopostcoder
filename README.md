@@ -15,14 +15,14 @@ PostGIS 2+, and sufficient DB privileges).
     $ createdb geopostcoder
     $ psql -c "CREATE EXTENSION postgis" geopostcoder
 
-copy `config/database.yml.example` to `config/database.yml`, and edit it to
-match your database name
-
 Then you can load the Code-Point Open data into your db:
 
     $ cat /cpo-download/Data/CSV/*.csv | script/load_code_point_open -d <database>
 
 ## Running a local server
+
+copy `config/database.yml.example` to `config/database.yml`, and edit it to
+match your database name
 
 Install the necessary gems by running `bundle install`, then start the server
 with `thin start`.
