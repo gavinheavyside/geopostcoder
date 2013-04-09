@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     %title= @page_title || "GeoPostCoder"
     = bootstrap_assets
-    %style= "body {padding-top: 60px; }"
   %body
-    .navbar.navbar-fixed-top.navbar-inverse
+    .navbar.navbar-inverse
       .navbar-inner
         %a.brand{href: '/'} GeoPostCoder
         %ul.nav
           %li.active
             %a{href: '/'} Find a Postcode
+    %a{href: "https://github.com/gavinheavyside/geopostcoder"}
+      %img{style: "position: absolute; top: 0; right: 0; border: 0;", src: "https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png", alt: "Fork me on GitHub"}
     .container
       = yield
