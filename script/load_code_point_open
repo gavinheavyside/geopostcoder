@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while getopts "d:" arg; do
+  case $arg in
+    d) db=$OPTARG ;;
+  esac
+done
+
+if [[ -z $db ]]; then
+  echo "Usage: cat path/to/postcode/csvs/* | $(basename $0) -d <database_name> "
+  exit
+fi
+
+awk 'BEGIN { FS = ","; OFS = ","; } {print $1,$3,$4;}' | tee blah.csv | psql -f 'script/load_code_point_open.sql' $db
