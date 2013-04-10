@@ -11,6 +11,8 @@
             Nearest Postcode is 
             %span.label.label-important
               %h2= @postcode
+          %a{href: "https://maps.google.co.uk/maps?q=#{@postcode}", target: "_blank"}
+            View this in Google Maps
         -else
           %h3 Couldn't Find a Postcode near there :/
         %hr
