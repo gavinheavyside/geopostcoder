@@ -1,4 +1,4 @@
-# geopostcoder
+# GeoPostCoder
 
 
 ## Loading Code-Point Open data into your database
@@ -29,3 +29,7 @@ with `thin start`.
 
 Point your browser at http://localhost:3000, and try out reverse geocoding some
 latitudes and longitudes to UK postcodes.
+
+## License
+
+GeoPostCoder is released under the [MIT License](http://opensource.org/licenses/MIT).
